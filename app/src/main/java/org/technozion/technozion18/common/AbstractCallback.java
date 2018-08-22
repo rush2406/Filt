@@ -26,7 +26,7 @@ abstract public class AbstractCallback implements Callback {
 
         //Log.d("Network Failure Log", t.getMessage());
         viewAction.showNetworkError("Unable to connect. Please try again!");    //show message
-
+        Log.e(TAG, t.getMessage());
         new Handler().postDelayed(new Runnable() {  //release lock after 2 seconds
             @Override
             public void run() {

@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import android.util.Log;
 
+import org.technozion.technozion18.api_services.Repository;
 import org.technozion.technozion18.utils.PrefManager;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
@@ -11,7 +12,8 @@ import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 public class MyApplication extends Application {
 
     private static MyApplication mInstance;
-    public PrefManager prefManager;
+    private PrefManager prefManager;
+    private Repository repository;
     //public static NetworkErrorDialogDriver networkErrorDialogDriver;
 
     @Override
@@ -28,7 +30,16 @@ public class MyApplication extends Application {
         }
 
         prefManager = new PrefManager(this);
+        repository = new Repository();
         mInstance = this;
+    }
+
+    public PrefManager getPrefManager() {
+        return prefManager;
+    }
+
+    public Repository getRepository() {
+        return repository;
     }
 
     public static synchronized MyApplication getInstance() {

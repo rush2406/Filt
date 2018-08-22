@@ -4,6 +4,8 @@ import android.util.Log;
 
 import org.technozion.technozion18.api_services.responses.PaginatedResponse;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Response;
 
@@ -19,8 +21,8 @@ public class EntitiesCallback<T> extends AbstractCallback {
     public void onResponse(Call call, Response response) {
         Log.d(TAG, response.code() + " " + response.message());
         if(response.code() >= 200 && response.code()<=299) {
-            PaginatedResponse<T> paginatedResponse = (PaginatedResponse<T>) response.body();
-            listener.onReceived(paginatedResponse.getResults());
+            List<T> entities = (List<T>) response.body();
+            listener.onReceived(entities);
         }
         else
             listener.showNetworkError("Please check your connection!");

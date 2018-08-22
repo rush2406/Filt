@@ -1,5 +1,7 @@
 package org.technozion.technozion18.api_services;
 
+import org.technozion.technozion18.common.AbstractCallback;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -24,5 +26,13 @@ public class Repository {
         return  RequestBody.create(
                 MediaType.parse("multipart/form-data"),  text );
 
+    }
+
+    public void getEvents(Map<String, String> map, AbstractCallback callback){
+        apiService.getEvents(map).enqueue(callback);
+    }
+
+    public void getEvent(int id, AbstractCallback callback){
+        apiService.getEventById(id).enqueue(callback);
     }
 }

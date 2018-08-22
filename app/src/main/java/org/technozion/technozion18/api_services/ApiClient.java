@@ -2,6 +2,8 @@ package org.technozion.technozion18.api_services;
 
 import android.util.Log;
 
+import com.google.gson.GsonBuilder;
+
 import org.technozion.technozion18.utils.Constants;
 
 import java.io.IOException;
@@ -57,7 +59,7 @@ public class ApiClient {
                     new Retrofit.Builder()
                             .baseUrl(BASE_URL)
                             .client(defaultHttpClient)
-                            .addConverterFactory(GsonConverterFactory.create())
+                            .addConverterFactory(GsonConverterFactory.create(new GsonBuilder().serializeNulls().create()))
                             .build();
 
         }
