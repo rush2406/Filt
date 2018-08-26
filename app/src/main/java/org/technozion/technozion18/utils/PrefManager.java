@@ -12,6 +12,8 @@ public class PrefManager {
 
     private static final String PREF_NAME = "technozion18";
 
+    private static final String USER_AUTH_TOKEN = "user_auth_token";
+
     public PrefManager(Context context) {
         this._context = context;
         pref = _context.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
@@ -26,4 +28,17 @@ public class PrefManager {
     public String getString(String key){
         return pref.getString(key, null);
     }
+
+    public void saveUserAuthToken(String token){
+        editor.putString(USER_AUTH_TOKEN, token);
+    }
+
+    public String getAuthToken(){
+        return pref.getString(USER_AUTH_TOKEN, null);
+    }
+
+    public Boolean isLoggedIn(){
+        return getAuthToken() == null;
+    }
+
 }

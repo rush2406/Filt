@@ -1,7 +1,7 @@
 package org.technozion.technozion18.models;
 
 public abstract class BaseModel {
-    int id;
+    Integer id;
 
     public int getId() {
         return id;
