@@ -38,7 +38,7 @@ public class PrefManager {
     }
 
     public Boolean isLoggedIn(){
-        return getAuthToken() == null;
+        return pref.contains(USER_AUTH_TOKEN);
     }
 
 }

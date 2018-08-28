@@ -13,7 +13,6 @@ public class MyApplication extends Application {
 
     private static MyApplication mInstance;
     private PrefManager prefManager;
-    private Repository repository;
     //public static NetworkErrorDialogDriver networkErrorDialogDriver;
 
     @Override
@@ -30,7 +29,6 @@ public class MyApplication extends Application {
         }
 
         prefManager = new PrefManager(this);
-        repository = new Repository();
         mInstance = this;
     }
 
@@ -39,7 +37,7 @@ public class MyApplication extends Application {
     }
 
     public Repository getRepository() {
-        return repository;
+        return Repository.getInstance();
     }
 
     public static synchronized MyApplication getInstance() {

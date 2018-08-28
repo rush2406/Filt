@@ -34,7 +34,7 @@ public class ApiClient {
         if (retrofit == null || token.equals("")) {
 
             Log.d(TAG, "Creating retrofit client...");
-
+            Log.d(TAG, prefManager.isLoggedIn() + "");
             final String authHeader = prefManager.isLoggedIn() ? "Token " + prefManager.getAuthToken() : "";
             HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
             loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
