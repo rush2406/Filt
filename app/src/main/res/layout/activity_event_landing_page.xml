@@ -6,161 +6,118 @@
     android:layout_height="match_parent"
     tools:context=".EventLandingPage"
     android:id="@+id/parent_layout">
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:id="@+id/layout_1"
-            android:orientation="vertical"
-            android:layout_weight="1">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:id="@+id/event_image"
-                    android:layout_height="wrap_content"
-                    android:background="#000"
-                    android:src="@drawable/login_bg"
-                  />
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:layout_weight=".75"
+        android:id="@+id/v1">
 
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/curve_shape_data"
-                    android:layout_marginTop="35dp"
-                    android:background="@drawable/upper_blob"
-                    android:layout_alignParentLeft="true"
-                    fontPath="fonts/f.ttf"
-                    android:textColor="#ffff"
-                    android:textAlignment="center"/>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_below="@+id/curve_shape"
-                    android:id="@+id/details_layout" >
-
-                    <TextView
-                        android:layout_marginTop="150dp"
-                        android:id="@+id/event_main_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="5dp"
-                        android:paddingLeft="5dp"
-                        android:paddingRight="5dp"
-                        android:paddingTop="5dp"
-                        fontPath="fonts/f.ttf"
-
-                        android:textColor="#000"
-                        android:textSize="20sp" />
-                    <TextView
-                        android:id="@+id/event_small_desc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingBottom="5dp"
-                        android:paddingLeft="5dp"
-                        android:paddingRight="5dp"
-                        android:paddingTop="5dp"
-                        fontPath="fonts/f.ttf"
-
-                        android:textColor="#ea0008" />
-
-
-                </LinearLayout>
-
-
-
-
-
-
-
-            </RelativeLayout>
-
-        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#000"
-            android:orientation="horizontal"
-            fontPath="fonts/f.ttf">
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/event_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#000"
+                        android:src="@drawable/login_bg" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-                <ImageView
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/calendar" />
-                <TextView
+                android:layout_weight="0"
+                android:orientation="horizontal"
+                android:background="@color/cardview_dark_background">
+
+                <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginTop="2.5dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:layout_weight="1"
+                    android:id="@+id/calender_image"
+                    android:src="@drawable/calendar" />
+
+                <TextView
                     android:id="@+id/calender_date"
                     fontPath="fonts/f.ttf"
+                    android:text="asdasdasdasd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="2.5dp"
+                    android:layout_weight="2"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF" />
+
                 <ImageView
-                    android:layout_marginLeft="15dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
                     android:layout_weight="1"
                     android:src="@drawable/clock" />
 
                 <TextView
-                    android:layout_marginTop="2.5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:id="@+id/clock_data"
                     fontPath="fonts/f.ttf"
+                    android:text="34324"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2.5dp"
+                    android:layout_weight="1"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF" />
+
                 <ImageView
+                    android:id="@+id/share_data"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="80dp"
-                    android:src="@drawable/share"
-                    android:id="@+id/share_data"/>
-
+                    android:src="@drawable/share" />
             </LinearLayout>
 
-
-
-
-
         </LinearLayout>
-        <LinearLayout
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_below="@id/v1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5"
+        android:orientation="vertical"
+        android:id="@+id/layout_2">
+
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight=".5"
-            android:orientation="vertical"
-            android:id="@+id/layout_2">
-
-             <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginTop="5dp"
-                fontPath="fonts/f.ttf"
-                android:paddingBottom="5dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:paddingTop="5dp"
-                android:textSize="12dp"
-                android:id="@+id/description_data"
-                android:background="@android:color/transparent"/>
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            fontPath="fonts/f.ttf"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:textSize="12dp"
+            android:id="@+id/description_data"
+            android:background="@android:color/transparent"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -241,6 +198,13 @@
             android:paddingRight="5dp"
             android:paddingTop="5dp"
             android:background="@android:color/transparent"/>
-        </LinearLayout>
     </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
 </RelativeLayout>
