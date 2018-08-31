@@ -1,5 +1,7 @@
 package org.technozion.technozion18.models;
 
+import org.technozion.technozion18.Tag;
+
 import java.util.List;
 
 public class Event extends BaseModel {
@@ -16,6 +18,12 @@ public class Event extends BaseModel {
     Integer priority;
     String prize_money;
     String workshop_percent;
+
+    public boolean hasTag(String string) {
+        if(category1.equals(string))
+            return true;
+        return false;
+    }
 
     public Venue getVenue() {
         return venue;

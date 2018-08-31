@@ -22,6 +22,15 @@ public class EventsRecyclerViewAdapter extends RecyclerView.Adapter<EventsRecycl
     Context context;
     LayoutInflater inflater;
 
+    public void setEvents(List<Event> e)
+    {
+        this.events=e;
+    }
+
+    public List<Event> getEvents()
+    {
+        return events;
+    }
     public EventsRecyclerViewAdapter(List<Event> events, Context context){
         this.events = events;
         this.context = context;
