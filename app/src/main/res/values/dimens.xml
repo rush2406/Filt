@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textsize_event_main">15sp</dimen>
+    <dimen name="textsize_small_desc">7sp</dimen>
+</resources>

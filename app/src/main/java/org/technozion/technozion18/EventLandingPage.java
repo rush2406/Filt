@@ -1,5 +1,6 @@
 package org.technozion.technozion18;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
@@ -21,7 +22,6 @@ public class EventLandingPage extends AppCompatActivity {
         setContentView(R.layout.activity_event_landing_page);
 
         if(getIntent().getIntExtra("eventId", 0) != 0) {
-            eventId = getIntent().getIntExtra("eventId", 0);
             final String TAG="EventLandingPage";
             eventId = getIntent().getIntExtra("eventId", 0);
             final ImageView event_image=findViewById(R.id.event_image);
@@ -41,10 +41,16 @@ public class EventLandingPage extends AppCompatActivity {
                 public void onReceived(Event event) {
                     EventLandingPage.this.event = event;
                     event_main_text.setText(event.getName());
+                    event_main_text.setTextColor(Color.WHITE);
+                    event_main_text.setBackgroundColor(getResources().getColor(R.color.translucentBlack));
+                    event_main_text.setTextSize(getResources().getDimension(R.dimen.textsize_event_main));
                     curved_data.setText((event.getEvent_type()));
                     calender_date.setText(event.getEvent_time());
                     description_data.setText(event.getEvent_type());
                     event_small_desc.setText(event.getAlias());
+                    event_small_desc.setTextColor(Color.WHITE);
+                    event_small_desc.setBackgroundColor(getResources().getColor(R.color.translucentBlack));
+                    event_small_desc.setTextSize(getResources().getDimension(R.dimen.textsize_small_desc));
                     description_data.setEnabled(false);
 
                 }
