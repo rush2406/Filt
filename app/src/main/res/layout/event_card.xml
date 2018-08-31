@@ -124,7 +124,7 @@
                         android:layout_alignParentTop="true"
                         android:layout_marginLeft="1dp"
                         android:layout_marginTop="25dp"
-                        android:background="@drawable/one_side_rounded"
+
                         android:paddingBottom="5dp"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
@@ -168,7 +168,7 @@
                             android:layout_height="30dp"
                             android:layout_alignParentRight="true"
                             android:layout_marginEnd="10dp"
-                            android:background="@drawable/rounded"
+
                             android:gravity="center_vertical"
                             android:text="Online"
                             android:layout_marginTop="10dp"

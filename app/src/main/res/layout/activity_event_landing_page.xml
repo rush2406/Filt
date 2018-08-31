@@ -10,237 +10,257 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:orientation="vertical">
+
         <LinearLayout
+            android:id="@+id/layout_1"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:id="@+id/layout_1"
-            android:orientation="vertical"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:orientation="vertical">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <ImageView
-                    android:layout_width="match_parent"
                     android:id="@+id/event_image"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
                     android:background="#000"
-                    android:src="@drawable/login_bg"
-                  />
+                    android:src="@drawable/login_bg" />
 
 
                 <TextView
+                    android:id="@+id/curve_shape_data"
+                    fontPath="fonts/f.ttf"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/curve_shape_data"
+                    android:layout_alignParentLeft="true"
                     android:layout_marginTop="35dp"
                     android:background="@drawable/upper_blob"
-                    android:layout_alignParentLeft="true"
-                    fontPath="fonts/f.ttf"
-                    android:textColor="#ffff"
-                    android:textAlignment="center"/>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_below="@+id/curve_shape"
-                    android:id="@+id/details_layout" >
+                    android:textAlignment="center"
+                    android:textColor="#ffff" />
+
+                <RelativeLayout
+                    android:id="@+id/details_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="104dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="40dp">
 
                     <TextView
-                        android:layout_marginTop="150dp"
                         android:id="@+id/event_main_text"
-                        android:layout_width="wrap_content"
+                        fontPath="fonts/f.ttf"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="11dp"
                         android:paddingBottom="5dp"
-                        android:paddingLeft="5dp"
+                        android:paddingLeft="15dp"
                         android:paddingRight="5dp"
                         android:paddingTop="5dp"
-                        fontPath="fonts/f.ttf"
-
+                        android:textAlignment="center"
                         android:textColor="#000"
                         android:textSize="20sp" />
+
                     <TextView
                         android:id="@+id/event_small_desc"
-                        android:layout_width="wrap_content"
+                        fontPath="fonts/f.ttf"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="13dp"
+
                         android:paddingBottom="5dp"
-                        android:paddingLeft="5dp"
+                        android:paddingLeft="15dp"
                         android:paddingRight="5dp"
                         android:paddingTop="5dp"
-                        fontPath="fonts/f.ttf"
-
                         android:textColor="#ea0008" />
 
 
-                </LinearLayout>
-
-
-
-
-
+                </RelativeLayout>
 
 
             </RelativeLayout>
 
         </LinearLayout>
+
         <LinearLayout
+            fontPath="fonts/f.ttf"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#000"
-            android:orientation="horizontal"
-            fontPath="fonts/f.ttf">
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
+
                 <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/calendar" />
-                <TextView
                     android:layout_width="wrap_content"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginTop="2.5dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
+                    android:layout_weight="1"
+                    android:src="@drawable/calendar" />
+
+                <TextView
                     android:id="@+id/calender_date"
                     fontPath="fonts/f.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="2.5dp"
+                    android:layout_weight="2"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF" />
+
                 <ImageView
-                    android:layout_marginLeft="15dp"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
                     android:layout_weight="1"
                     android:src="@drawable/clock" />
 
                 <TextView
-                    android:layout_marginTop="2.5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:id="@+id/clock_data"
                     fontPath="fonts/f.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2.5dp"
+                    android:layout_weight="1"
                     android:textAlignment="center"
                     android:textColor="#FFFFFF" />
+
                 <ImageView
+                    android:id="@+id/share_data"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="80dp"
-                    android:src="@drawable/share"
-                    android:id="@+id/share_data"/>
+                    android:src="@drawable/share" />
 
             </LinearLayout>
 
 
-
-
-
         </LinearLayout>
+
         <LinearLayout
+            android:id="@+id/layout_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight=".5"
-            android:orientation="vertical"
-            android:id="@+id/layout_2">
+            android:orientation="vertical">
 
-             <EditText
+            <EditText
+                android:id="@+id/description_data"
+                fontPath="fonts/f.ttf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="5dp"
-                fontPath="fonts/f.ttf"
+                android:background="@android:color/transparent"
                 android:paddingBottom="5dp"
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
                 android:paddingTop="5dp"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="  ENTRY CHARGE"
+                android:textColor="#000"
                 android:textSize="12dp"
-                android:id="@+id/description_data"
-                android:background="@android:color/transparent"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="12dp"
-            android:textColor="#000"
-            android:textStyle="bold"
-            android:layout_marginLeft="5dp"
-            android:text="  ENTRY CHARGE"/>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:id="@+id/entry_charge"
-            android:layout_marginLeft="10dp"
-            android:textSize="12dp"
-            android:layout_marginRight="5dp"
-            fontPath="fonts/f.ttf"
-            android:paddingBottom="5dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:paddingTop="5dp"
-            android:background="@android:color/transparent"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:background="#FFE6E3E3"
-            android:id="@+id/v1"/>
-        <TextView
+                android:textStyle="bold" />
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="12dp"
-            android:id="@+id/address"
-            android:textColor="#000"
-            android:textStyle="bold"
-            android:layout_marginLeft="10dp"
-            android:text=" ADDRESS"/>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:id="@+id/address_text"
-            android:layout_marginLeft="10dp"
-            fontPath="fonts/f.ttf"
-            android:textSize="12dp"
-            android:layout_marginRight="5dp"
-            android:paddingBottom="5dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:paddingTop="5dp"
-            android:background="@android:color/transparent"/>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:background="#FFE6E3E3"
-            android:id="@+id/v2"/>
-        <TextView
+            <EditText
+                android:id="@+id/entry_charge"
+                fontPath="fonts/f.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:background="@android:color/transparent"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:textSize="12dp" />
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="12dp"
-            android:id="@+id/Terms"
-            android:textColor="#000"
-            android:textStyle="bold"
-            android:layout_marginLeft="10dp"
-            android:text=" TERMS"/>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:id="@+id/terms_text"
-            android:layout_marginLeft="10dp"
-            fontPath="fonts/f.ttf"
-            android:textSize="12dp"
-            android:layout_marginRight="5dp"
-            android:paddingBottom="5dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:paddingTop="5dp"
-            android:background="@android:color/transparent"/>
+            <View
+                android:id="@+id/v1"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#FFE6E3E3" />
+
+            <TextView
+
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text=" ADDRESS"
+                android:textColor="#000"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/address_text"
+                fontPath="fonts/f.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:background="@android:color/transparent"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:textSize="12dp" />
+
+            <View
+                android:id="@+id/v2"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#FFE6E3E3" />
+
+            <TextView
+
+                android:id="@+id/Terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text=" TERMS"
+                android:textColor="#000"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/terms_text"
+                fontPath="fonts/f.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:background="@android:color/transparent"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:textSize="12dp" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
