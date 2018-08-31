@@ -31,7 +31,7 @@ public class EventsRecyclerViewAdapter extends RecyclerView.Adapter<EventsRecycl
     @NonNull
     @Override
     public EventViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new EventViewHolder(inflater.inflate(R.layout.card_event, parent, false));
+        return new EventViewHolder(inflater.inflate(R.layout.event_card, parent, false));
     }
 
     @Override
@@ -58,7 +58,7 @@ public class EventsRecyclerViewAdapter extends RecyclerView.Adapter<EventsRecycl
         public EventViewHolder(View itemView) {
             super(itemView);
             cardView = itemView.findViewById(R.id.cardView);
-            eventNameTextView = itemView.findViewById(R.id.eventName);
+            eventNameTextView = itemView.findViewById(R.id.event_name);
         }
     }
 
