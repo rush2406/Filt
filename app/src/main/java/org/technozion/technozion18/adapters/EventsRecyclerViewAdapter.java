@@ -57,7 +57,7 @@ public class EventsRecyclerViewAdapter extends RecyclerView.Adapter<EventsRecycl
 
         public EventViewHolder(View itemView) {
             super(itemView);
-            cardView = itemView.findViewById(R.id.cardView);
+            cardView = itemView.findViewById(R.id.card_view);
             eventNameTextView = itemView.findViewById(R.id.event_name);
         }
     }
