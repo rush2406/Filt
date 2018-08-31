@@ -4,7 +4,9 @@ import android.util.Log;
 
 import com.google.gson.GsonBuilder;
 
+import org.technozion.technozion18.MyApplication;
 import org.technozion.technozion18.utils.Constants;
+import org.technozion.technozion18.utils.PrefManager;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -24,6 +26,7 @@ public class ApiClient {
     private static Retrofit retrofit = null;
     private static String token;
     private static final String TAG = ApiClient.class.getSimpleName();
+    private static final PrefManager prefManager = MyApplication.getInstance().getPrefManager();
 
 
     public static Retrofit getClient() {
@@ -31,8 +34,8 @@ public class ApiClient {
         if (retrofit == null || token.equals("")) {
 
             Log.d(TAG, "Creating retrofit client...");
-
-            final String authHeader = "";
+            Log.d(TAG, prefManager.isLoggedIn() + "");
+            final String authHeader = prefManager.isLoggedIn() ? "Token " + prefManager.getAuthToken() : "";
             HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
             loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
 

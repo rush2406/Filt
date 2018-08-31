@@ -12,4 +12,9 @@
     <color name="green_dot_big">@color/blue</color>
     <color name="green_dot_small">@color/blue</color>
 
+    <color name="offWhite">#F1F1F1</color>
+
+    <color name="translucentBlack">#8C000000</color>
+
+
 </resources>
