@@ -25,7 +25,7 @@
                     android:id="@+id/event_image"
                     android:layout_height="wrap_content"
                     android:background="#000"
-                    android:src="@drawable/p3"
+                    android:src="@drawable/login_bg"
                   />
 
 
