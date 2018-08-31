@@ -14,5 +14,7 @@
 
     <color name="offWhite">#F1F1F1</color>
 
+    <color name="translucentBlack">#8C000000</color>
+
 
 </resources>
