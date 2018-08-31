@@ -30,7 +30,7 @@ public class PrefManager {
     }
 
     public void saveUserAuthToken(String token){
-        editor.putString(USER_AUTH_TOKEN, token);
+        saveString(USER_AUTH_TOKEN, token);
     }
 
     public String getAuthToken(){
