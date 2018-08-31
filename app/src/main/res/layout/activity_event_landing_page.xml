@@ -103,7 +103,7 @@
         android:orientation="vertical"
         android:id="@+id/layout_2">
 
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -126,7 +126,7 @@
             android:textStyle="bold"
             android:layout_marginLeft="5dp"
             android:text="  ENTRY CHARGE"/>
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -155,7 +155,7 @@
             android:textStyle="bold"
             android:layout_marginLeft="10dp"
             android:text=" ADDRESS"/>
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
@@ -184,7 +184,7 @@
             android:textStyle="bold"
             android:layout_marginLeft="10dp"
             android:text=" TERMS"/>
-        <EditText
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
