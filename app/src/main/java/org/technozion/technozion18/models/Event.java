@@ -20,7 +20,7 @@ public class Event extends BaseModel {
     String workshop_percent;
 
     public boolean hasTag(String string) {
-        if(category1.equals(string))
+        if(department.equals(string)||category1.equals(string)||category2.equals(string))
             return true;
         return false;
     }

@@ -23,6 +23,7 @@ import java.util.*
 import android.content.res.TypedArray
 import android.graphics.Color
 import android.support.annotation.ColorInt
+import android.util.Log
 
 
 /**
@@ -105,6 +106,7 @@ class Filter<T : FilterModel> : FrameLayout, FilterItemListener, CollapseListene
                 view.listener = this
                 expandedFilter.addView(view)
                 mItems.put(view, item)
+                Log.d("hey",item.getText());
             }
             if (isCollapsed == null) {
                 collapse(1)

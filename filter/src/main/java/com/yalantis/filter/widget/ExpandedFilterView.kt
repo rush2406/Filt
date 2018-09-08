@@ -2,6 +2,7 @@ package com.yalantis.filter.widget
 
 import android.content.Context
 import android.util.AttributeSet
+import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,7 @@ import com.yalantis.filter.R
 import com.yalantis.filter.listener.CollapseListener
 import com.yalantis.filter.model.Coord
 import java.util.*
+import java.util.logging.Logger
 
 /**
  * Created by galata on 30.08.16.
