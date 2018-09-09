@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Technozion\\'18</string>
+    <string name="app_name">Technozion 2018</string>
     <string name="hello">fsdfsdfsfsfsfsfdsfsdfdsdfdsfdsdfsdfsdfsfsdfsadfsdfsadfsafsadfdsdaf</string>
     <string name="text1">The museum is housed in the Louvre Palace, originally built as a fortress in the late 12th century…</string>
     <string name="text2">Gwanghwamun is the main and largest gate of Gyeongbokgung Palace, in Jongno-gu, Seoul, South Korea.</string>
@@ -7,4 +7,30 @@
     <string name="text4">The Temple of Heaven is an imperial complex of religious buildings situated in the southeastern part…</string>
     <string name="text5">The Aegean Islands are within the sea and some bound it on its southern periphery…</string>
     <string name="updateProfileSubHeading"> Please provide the following information. All fields are mandatory. You can't register for any event before updating your profile information.</string>
+    <string-array name="job_titles">
+        <item>All categories</item>
+        <item>Spotlight</item>
+        <item>Papers</item>
+        <item>General</item>
+        <item>Club</item>
+        <item>Others</item>
+    </string-array>
+    <string name="str_all_selected">All categories</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_share">Share</string>
+    <string name="search_prompt">What are you looking for?</string>
+    <string name="search_label">Search</string>
+    <string name="image_title">Title</string>
+    <string name="image_resource_description">Image Resource</string>
+    <string name="title_activity_image_display">Full Image</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="app_title">Google Image Search</string>
+    <string name="search_title">Select Filters</string>
+    <string name="settings_image_size_label">Image Size</string>
+    <string name="settings_color_label">Color Filter</string>
+    <string name="settings_image_type_label">Image Type</string>
+    <string name="settings_site_label">Site Filter</string>
+    <string name="hint_site_filter">Type a domain</string>
+    <string name="save">Save</string>
 </resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sizes">
+        <item>all</item>
+        <item>Day 0</item>
+        <item>Day 1</item>
+        <item>Day 2</item>
+        <item>Day 3</item>
+    </string-array>
+    <string-array name="colors">
+        <item>all</item>
+        <item>Mechanical Engineering</item>
+        <item>Electrical Engineering</item>
+        <item>Electronics and communication Engineering</item>
+        <item>Civil Engineering</item>
+        <item>Chemical Engineering</item>
+        <item>Biotechnology</item>
+        <item>OtherDepartments</item>
+        <item>Computer Science and Engineering</item>
+        <item>open for all branches and years</item>
+        <item>Metallurgical &amp; Material Engineering</item>
+    </string-array>
+    <string-array name="image_types">
+        <item>all</item>
+        <item>Spotlight</item>
+        <item>General</item>
+        <item>Club</item>
+        <item>Others</item>
+        <item>Papers</item>
+        <item>Thematic</item>
+        <item>Robotics</item>
+    </string-array>
+</resources>
