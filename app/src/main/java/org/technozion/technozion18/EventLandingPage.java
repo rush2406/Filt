@@ -18,7 +18,6 @@ import android.widget.Toast;
 import org.technozion.technozion18.common.OnEntityReceivedListener;
 import org.technozion.technozion18.models.Event;
 import org.technozion.technozion18.presenters.EventPresenter;
-import org.technozion.technozion18.utils.ResizableCustomView;
 
 public class EventLandingPage extends AppCompatActivity {
 
@@ -53,7 +52,8 @@ public class EventLandingPage extends AppCompatActivity {
 
 
                    // event_main_text.setText(event.getName());
-                    description_data.setText(Html.fromHtml(event.getContents().get(0).getContent()).toString());
+                    if(event.getContents().size() != 0)
+                        description_data.setText(Html.fromHtml(event.getContents().get(0).getContent()).toString());
                     description_data.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {

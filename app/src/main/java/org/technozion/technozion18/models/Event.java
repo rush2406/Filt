@@ -1,7 +1,5 @@
 package org.technozion.technozion18.models;
 
-import org.technozion.technozion18.Tag;
-
 import java.util.List;
 
 public class Event extends BaseModel {

@@ -8,7 +8,9 @@ import org.technozion.technozion18.common.OnEntitiesReceivedListener;
 import org.technozion.technozion18.common.OnEntityReceivedListener;
 import org.technozion.technozion18.models.Event;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class EventPresenter {
@@ -17,12 +19,12 @@ public class EventPresenter {
 
     public void getEvents(OnEntitiesReceivedListener<Event> listener){
         listener.showLoader();
-        repository.getEvents(new HashMap<String, String>(), new EntitiesCallback<>(listener));
+        repository.getEvents(new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>(), new EntitiesCallback<>(listener));
     }
 
-    public void getEvents(Map<String, String> filters, OnEntitiesReceivedListener<Event> listener){
+    public void getEvents(List<String> types, List<String> categories, List<String> departments, List<String> days, OnEntitiesReceivedListener<Event> listener){
         listener.showLoader();
-        repository.getEvents(filters, new EntitiesCallback<>(listener));
+        repository.getEvents(types, categories, departments, days, new EntitiesCallback<>(listener));
     }
 
     public void getEvent(int id, OnEntityReceivedListener<Event> listener){

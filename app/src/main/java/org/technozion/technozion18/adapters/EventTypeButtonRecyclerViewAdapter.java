@@ -12,14 +12,15 @@ import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
 
+import org.technozion.technozion18.EventListActivity;
 import org.technozion.technozion18.MainActivity;
 import org.technozion.technozion18.R;
 
 public class EventTypeButtonRecyclerViewAdapter extends RecyclerView.Adapter<EventTypeButtonRecyclerViewAdapter.EventTypeButtonViewHolder> {
 
-    String[] eventType = {"spotlight", "lectures", "workshop", "initiative", "attractions"};
-    String[] label = {"Spotlights", "Guest Lectures", "Workshops", "Initiatives", "Attractions"};
-    int[] drawableId = {R.drawable.ic_spotlight, R.drawable.ic_guest_lecture, R.drawable.ic_workshops, R.drawable.ic_initiatives, R.drawable.ic_attractions };
+    String[] eventType = {"event", "proshow", "spotlight", "lectures", "workshop", "initiative", "attractions"};
+    String[] label = {"Events", "Proshows", "spotlights", "Guest Lectures", "Workshops", "Initiatives", "Attractions"};
+    int[] drawableId = {R.drawable.ic_events, R.drawable.ic_concert, R.drawable.ic_spotlight, R.drawable.ic_guest_lecture, R.drawable.ic_workshops, R.drawable.ic_initiatives, R.drawable.ic_attractions };
     Context context;
     LayoutInflater inflater;
 
@@ -40,7 +41,7 @@ public class EventTypeButtonRecyclerViewAdapter extends RecyclerView.Adapter<Eve
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(context, MainActivity.class);
+                Intent i = new Intent(context, EventListActivity.class);
                 i.putExtra("eventType", eventType[position]);
                 i.putExtra("label", label[position]);
                 context.startActivity(i);

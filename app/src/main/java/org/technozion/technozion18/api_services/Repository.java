@@ -5,6 +5,7 @@ import org.technozion.technozion18.models.User;
 import org.technozion.technozion18.models.UserProfile;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import okhttp3.MediaType;
@@ -42,8 +43,8 @@ public class Repository {
 
     }
 
-    public void getEvents(Map<String, String> map, AbstractCallback callback){
-        apiService.getEvents(map).enqueue(callback);
+    public void getEvents(List<String> type, List<String> category, List<String> departments, List<String> days, AbstractCallback callback){
+        apiService.getEvents(type, category, departments, days).enqueue(callback);
     }
 
     public void getEvent(int id, AbstractCallback callback){

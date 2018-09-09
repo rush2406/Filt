@@ -63,9 +63,10 @@ public class Homepage extends BaseActivity {
         workshopsAdapter = new EventsSmallRecyclerViewAdapter(workshops, this);
         workshopsRecyclerView.setAdapter(workshopsAdapter);
         workshopsRecyclerView.setNestedScrollingEnabled(false);
-        Map<String, String> filters = new HashMap<>();
-        filters.put("type", "workshop");
-        new EventPresenter().getEvents(filters, new OnEntitiesReceivedListener<Event>(this) {
+        Map<String, List<String>> filters = new HashMap<>();
+        List<String> typeFilter = new ArrayList<>();
+        typeFilter.add("workshop");
+        new EventPresenter().getEvents(typeFilter, new ArrayList<String>(), new ArrayList<String>(), new ArrayList<String>(), new OnEntitiesReceivedListener<Event>(this) {
             @Override
             public void onReceived(List<Event> entities) {
                 workshops.addAll(entities);
@@ -80,9 +81,10 @@ public class Homepage extends BaseActivity {
         spotlightEventsAdapter = new EventsSmallRecyclerViewAdapter(spotlights, this);
         spotlightRecyclerView.setAdapter(spotlightEventsAdapter);
         spotlightRecyclerView.setNestedScrollingEnabled(false);
-        Map<String, String> filters = new HashMap<>();
-        filters.put("category", "spotlight");
-        new EventPresenter().getEvents(filters, new OnEntitiesReceivedListener<Event>(this) {
+        Map<String, List<String>> filters = new HashMap<>();
+        List<String> categories = new ArrayList<>();
+        categories.add("spotlight");
+        new EventPresenter().getEvents(new ArrayList<String>(), categories, new ArrayList<String>(), new ArrayList<String>(), new OnEntitiesReceivedListener<Event>(this) {
             @Override
             public void onReceived(List<Event> entities) {
                 spotlights.addAll(entities);

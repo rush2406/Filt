@@ -7,5 +7,7 @@
     <dimen name="size_image_result">110dp</dimen>
     <dimen name="textsize_event_main">15sp</dimen>
     <dimen name="textsize_small_desc">7sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="item_height">12dp</dimen>
 
 </resources>

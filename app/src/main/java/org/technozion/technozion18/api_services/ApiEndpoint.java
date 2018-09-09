@@ -48,7 +48,11 @@ public interface ApiEndpoint {
     Call<ProfileResponse> getUserProfile();
 
     @GET("events/")
-    Call<List<Event>> getEvents(@QueryMap Map<String, String> map);
+    Call<List<Event>> getEvents(
+            @Query("type") List<String> types,
+            @Query("category") List<String> categories,
+            @Query("department") List<String> departments,
+            @Query("day") List<String> days);
 
     @GET("events/{id}")
     Call<Event> getEventById(@Path("id") int id);

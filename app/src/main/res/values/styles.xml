@@ -29,6 +29,10 @@
         <item name="android:ellipsize">end</item>
     </style>
 
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
     <style name="buttons" parent="@android:style/TextAppearance.Medium">
         <item name="android:textColor">@android:color/white</item>
         <item name="android:background">@color/teal</item>
