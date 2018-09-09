@@ -13,9 +13,14 @@ public class AuthenticationPresenter {
 
     public void authenticate(User user, final AuthenticationListener listener){
 
+        listener.showLoader();
+
         MyApplication.getInstance().getRepository().signin(user.getUsername(), user.getPassword(), new AbstractCallback(listener) {
             @Override
             public void onResponse(Call call, Response response) {
+
+                listener.hideLoader();
+
                 if(response.code() == 200){
                     AuthenticationResponse authenticationResponse = (AuthenticationResponse) response.body();
                     listener.onAuthenticated(authenticationResponse.getToken());

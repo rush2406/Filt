@@ -16,15 +16,18 @@
         <activity android:name=".EventLandingPage" />
         <activity android:name=".SplashActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".UpdateProfileActivity" />
+        <activity android:name=".Homepage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignupActivity" />
-        <activity android:name=".UpdateProfileActivity"></activity>
+        <activity android:name=".ViewProfileActivity" />
+        <activity android:name=".BaseActivity"></activity>
     </application>
 
 </manifest>

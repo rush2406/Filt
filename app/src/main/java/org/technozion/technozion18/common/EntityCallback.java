@@ -17,6 +17,9 @@ public class EntityCallback<T> extends AbstractCallback{
 
     @Override
     public void onResponse(Call call, Response response) {
+
+        listener.hideLoader();
+
         Log.d(TAG, response.code() + " " + response.message());
         if(response.code() >= 200&&response.code()<=299) {
             T entity = (T) response.body();

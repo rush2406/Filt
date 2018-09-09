@@ -28,6 +28,10 @@ public class ApiClient {
     private static final String TAG = ApiClient.class.getSimpleName();
     private static final PrefManager prefManager = MyApplication.getInstance().getPrefManager();
 
+    private static String getAuthHeader(){
+        return prefManager.isLoggedIn() ? "Token " + prefManager.getAuthToken() : "";
+    }
+
 
     public static Retrofit getClient() {
 
@@ -46,7 +50,7 @@ public class ApiClient {
                                 public Response intercept(Interceptor.Chain chain) throws IOException {
                                     Request request = chain.request().newBuilder()
                                             .addHeader("Accept", "application/JSON")
-                                            .addHeader("Authorization", authHeader)
+                                            .addHeader("Authorization", getAuthHeader())
                                             .build();
                                     return chain.proceed(request);
                                 }

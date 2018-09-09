@@ -18,6 +18,9 @@ abstract public class AbstractCallback implements Callback {
 
     @Override
     public void onFailure(Call call, Throwable t) {
+
+        viewAction.hideLoader();
+
         Log.d(TAG, "ISFAIL : " + IS_FAILURE);
         if(IS_FAILURE)
             return;
