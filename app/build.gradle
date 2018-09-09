@@ -38,10 +38,22 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
 
     implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'jp.wasabeef:blurry:2.1.1'
 
     implementation 'com.rengwuxian.materialedittext:library:2.1.4'
-    compile 'com.jaredrummler:material-spinner:1.2.5'
-    compile 'com.facebook.fresco:fresco:0.13.0'
+
+    implementation 'com.facebook.fresco:fresco:0.13.0'
+
+    implementation 'com.jaredrummler:material-spinner:1.2.5'
+
+    implementation 'com.github.natiginfo:EasyFont:v1.0.6'
+
+
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+
 
     testImplementation 'junit:junit:4.12'
     compile project(':filter')

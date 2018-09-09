@@ -23,7 +23,7 @@ public class MyApplication extends Application {
         if (android.os.Build.VERSION.SDK_INT>19) {
             Log.d("MyApplication","Higher than kitkat");
             CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                    .setDefaultFontPath("fonts/DroidSans.ttf")
+                    .setDefaultFontPath("fonts/Product Sans Regular.ttf")
                     .setFontAttrId(uk.co.chrisjenx.calligraphy.R.attr.fontPath)
                     .build());
         }

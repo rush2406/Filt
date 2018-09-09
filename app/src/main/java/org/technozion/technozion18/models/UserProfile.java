@@ -9,7 +9,7 @@ public class UserProfile extends BaseModel {
     String other_college_name;
     String state;
     String college_reg_id;
-    String is_registered;
+    Boolean is_registered;
     String is_hospitality;
     String is_nitw;
     String is_nitap;
@@ -86,11 +86,11 @@ public class UserProfile extends BaseModel {
         this.college_reg_id = college_reg_id;
     }
 
-    public String getIs_registered() {
+    public Boolean getIs_registered() {
         return is_registered;
     }
 
-    public void setIs_registered(String is_registered) {
+    public void setIs_registered(Boolean is_registered) {
         this.is_registered = is_registered;
     }
 

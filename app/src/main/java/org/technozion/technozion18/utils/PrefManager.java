@@ -13,6 +13,7 @@ public class PrefManager {
     private static final String PREF_NAME = "technozion18";
 
     private static final String USER_AUTH_TOKEN = "user_auth_token";
+    private static final String USER_ID = "user_id";
 
     public PrefManager(Context context) {
         this._context = context;
@@ -25,12 +26,26 @@ public class PrefManager {
         editor.commit();
     }
 
+    public void logout(){
+        editor.remove(USER_AUTH_TOKEN);
+        editor.commit();
+    }
+
     public String getString(String key){
         return pref.getString(key, null);
     }
 
+    public void saveUserId(int id){
+        editor.putInt(USER_ID, id);
+        editor.commit();
+    }
+
+    public int getUserId(){
+        return pref.getInt(USER_ID, -1);
+    }
+
     public void saveUserAuthToken(String token){
-        editor.putString(USER_AUTH_TOKEN, token);
+        saveString(USER_AUTH_TOKEN, token);
     }
 
     public String getAuthToken(){

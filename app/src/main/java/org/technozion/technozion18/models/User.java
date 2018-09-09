@@ -2,7 +2,9 @@ package org.technozion.technozion18.models;
 
 import org.technozion.technozion18.MyApplication;
 import org.technozion.technozion18.common.EntityCallback;
+import org.technozion.technozion18.common.OnCreateUserListener;
 import org.technozion.technozion18.common.OnEntityReceivedListener;
+import org.technozion.technozion18.common.UserCallback;
 
 public class User extends BaseModel {
     String username, first_name, last_name, email, password;
@@ -47,7 +49,8 @@ public class User extends BaseModel {
         this.password = password;
     }
 
-    public void createUser(OnEntityReceivedListener<User> listener){
-        MyApplication.getInstance().getRepository().signup(this, new EntityCallback<User>(listener));
+    public void createUser(OnCreateUserListener listener){
+        listener.showLoader();
+        MyApplication.getInstance().getRepository().signup(this, new UserCallback(listener));
     }
 }

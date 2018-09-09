@@ -11,15 +11,25 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import com.rengwuxian.materialedittext.MaterialEditText;
+
+import org.technozion.technozion18.api_services.responses.ProfileResponse;
+import org.technozion.technozion18.common.AuthenticationListener;
+import org.technozion.technozion18.common.OnEntityReceivedListener;
+import org.technozion.technozion18.models.User;
+import org.technozion.technozion18.presenters.AuthenticationPresenter;
+import org.technozion.technozion18.presenters.UserPresenter;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends BaseActivity {
 
     RelativeLayout loginForm;
     CircleImageView logoImageView;
-    CardView signUpButton;
+    CardView signUpButton,loginButton;
+    MaterialEditText email, password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +40,45 @@ public class LoginActivity extends AppCompatActivity {
         logoImageView = findViewById(R.id.logo);
         loginForm = findViewById(R.id.loginForm);
         signUpButton = findViewById(R.id.buttonSignup);
+        loginButton = findViewById(R.id.buttonLogIn);
+        email = findViewById(R.id.email);
+        password = findViewById(R.id.password);
 
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //authenticate the user
+                User user = new User();
+                user.setUsername(email.getText().toString());
+                user.setPassword(password.getText().toString());
+                new AuthenticationPresenter().authenticate(user, new AuthenticationListener(LoginActivity.this) {
+
+                    @Override
+                    public void onAuthenticated(String token) {
+                        //save user token
+                        MyApplication.getInstance().getPrefManager().saveUserAuthToken(token);
+
+                        //check if profile updated
+                        new UserPresenter().getCurrentUserProfile(new OnEntityReceivedListener<ProfileResponse>(LoginActivity.this) {
+                            @Override
+                            public void onReceived(ProfileResponse entity) {
+                                if (entity.getProfile() == null)
+                                    startActivity(new Intent(LoginActivity.this, UpdateProfileActivity.class));
+                                else
+                                    startActivity(new Intent(LoginActivity.this, Homepage.class));
+                                finish();
+                            }
+                        });
+                    }
+
+                    @Override
+                    public void onFailure() {
+                        showMessage("Incorrect username or password!");
+                    }
+
+                });
+            }
+        });
 
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override

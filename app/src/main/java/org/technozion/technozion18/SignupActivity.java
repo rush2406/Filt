@@ -12,6 +12,7 @@ import com.rengwuxian.materialedittext.MaterialEditText;
 
 import org.technozion.technozion18.api_services.responses.ProfileResponse;
 import org.technozion.technozion18.common.AuthenticationListener;
+import org.technozion.technozion18.common.OnCreateUserListener;
 import org.technozion.technozion18.common.OnEntityReceivedListener;
 import org.technozion.technozion18.models.User;
 import org.technozion.technozion18.models.UserProfile;
@@ -64,9 +65,9 @@ public class SignupActivity extends AppCompatActivity {
         user.setLast_name(lastNameEditText.getText().toString());
         user.setUsername(user.getEmail());
         user.setPassword(passwordEditText.getText().toString());
-        user.createUser(new OnEntityReceivedListener<User>(this) {
+        user.createUser(new OnCreateUserListener(this) {
             @Override
-            public void onReceived(User entity) {
+            public void onUserCreated(User entity) {
                 Toast.makeText(SignupActivity.this, "Account created successfully!", Toast.LENGTH_SHORT).show();
 
                 //authenticate the user
@@ -95,6 +96,7 @@ public class SignupActivity extends AppCompatActivity {
                     }
                 });
             }
+
         });
     }
 }

@@ -2,6 +2,7 @@ package org.technozion.technozion18.api_services;
 
 import org.technozion.technozion18.common.AbstractCallback;
 import org.technozion.technozion18.models.User;
+import org.technozion.technozion18.models.UserProfile;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -63,6 +64,14 @@ public class Repository {
 
     public void getCurrentUserProfile(AbstractCallback callback){
         apiService.getUserProfile().enqueue(callback);
+    }
+
+    public void updateUserProfile(UserProfile userProfile, AbstractCallback callback){
+        apiService.postUserProfile(userProfile).enqueue(callback);
+    }
+
+    public void updateUserProfile(Map<String, String> map, AbstractCallback callback){
+        apiService.postUserProfile(map).enqueue(callback);
     }
 
     public void getColleges(int cityNo, AbstractCallback callback){

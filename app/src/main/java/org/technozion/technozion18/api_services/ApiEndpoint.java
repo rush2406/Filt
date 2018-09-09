@@ -36,9 +36,13 @@ public interface ApiEndpoint {
     @GET("users/")
     Call<User> getCurrentUser();
 
-    @POST("users/profile")
+    @POST("users/profile/")
     @Headers("Content-Type: application/json")
-    Call<ProfileResponse> postUserProfile(@Body UserProfile userProfile);
+    Call<UserProfile> postUserProfile(@Body UserProfile userProfile);
+
+    @POST("users/profile/")
+    @FormUrlEncoded
+    Call<UserProfile> postUserProfile(@FieldMap Map<String, String> map);
 
     @GET("users/profile")
     Call<ProfileResponse> getUserProfile();

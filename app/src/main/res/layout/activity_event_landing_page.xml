@@ -1,14 +1,228 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EventLandingPage">
+    tools:context=".EventLandingPage"
+    android:id="@+id/parent_layout">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        app:contentPaddingBottom="5dp"
+        app:contentPaddingRight="5dp"
+        app:contentPaddingLeft="5dp"
+        app:contentPaddingTop="5dp"
+        android:layout_weight=".75"
+        android:id="@+id/main_layout">
 
-    <TextView
-        android:id="@+id/textView"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/event_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#000"
+                        android:src="@drawable/login_bg" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:orientation="horizontal"
+
+                android:background="@color/cardview_dark_background">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/calender_image"
+                    android:src="@drawable/calendar" />
+
+                <TextView
+                    android:id="@+id/calender_date"
+                    fontPath="fonts/f.ttf"
+                    android:text="asdasdasdasd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="2.5dp"
+                    android:layout_weight="2"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/clock" />
+
+                <TextView
+                    android:id="@+id/clock_data"
+                    fontPath="fonts/f.ttf"
+                    android:text="34324"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2.5dp"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF" />
+
+                <ImageView
+                    android:id="@+id/share_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:src="@drawable/share" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
 
-</android.support.constraint.ConstraintLayout>
+        android:layout_weight="1"
+        android:id="@+id/v11"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="10dp"
+        app:contentPaddingBottom="5dp"
+        app:contentPaddingRight="5dp"
+        app:contentPaddingLeft="5dp"
+        app:contentPaddingTop="5dp"
+        android:layout_below="@id/main_layout">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".5"
+        android:orientation="vertical"
+        android:id="@+id/layout_2">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            fontPath="fonts/f.ttf"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:textSize="12dp"
+            android:id="@+id/description_data"
+            android:maxLines="3"
+            android:background="@android:color/transparent"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            android:text="  ENTRY CHARGE"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/entry_charge"
+            android:layout_marginLeft="10dp"
+            android:textSize="12dp"
+            android:layout_marginRight="5dp"
+            fontPath="fonts/f.ttf"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:background="@android:color/transparent"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#FFE6E3E3"
+            android:id="@+id/v1"/>
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:id="@+id/address"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:text=" ADDRESS"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/address_text"
+            android:layout_marginLeft="10dp"
+            fontPath="fonts/f.ttf"
+            android:textSize="12dp"
+            android:layout_marginRight="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:background="@android:color/transparent"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="#FFE6E3E3"
+            android:id="@+id/v2"/>
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12dp"
+            android:id="@+id/Terms"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:text=" TERMS"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/terms_text"
+            android:layout_marginLeft="10dp"
+            fontPath="fonts/f.ttf"
+            android:textSize="12dp"
+            android:layout_marginRight="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:background="@android:color/transparent"/>
+    </LinearLayout>
+
+
+
+
+
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

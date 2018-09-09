@@ -16,14 +16,17 @@ public class EventPresenter {
     Repository repository = MyApplication.getInstance().getRepository();
 
     public void getEvents(OnEntitiesReceivedListener<Event> listener){
+        listener.showLoader();
         repository.getEvents(new HashMap<String, String>(), new EntitiesCallback<>(listener));
     }
 
     public void getEvents(Map<String, String> filters, OnEntitiesReceivedListener<Event> listener){
+        listener.showLoader();
         repository.getEvents(filters, new EntitiesCallback<>(listener));
     }
 
     public void getEvent(int id, OnEntityReceivedListener<Event> listener){
-        repository.getEvent(id, new EntityCallback<Event>(listener));
+        listener.showLoader();
+        repository.getEvent(id, new EntityCallback<>(listener));
     }
 }

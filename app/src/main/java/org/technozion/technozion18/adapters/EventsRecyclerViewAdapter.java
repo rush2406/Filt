@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.technozion.technozion18.EventLandingPage;
@@ -40,7 +41,7 @@ public class EventsRecyclerViewAdapter extends RecyclerView.Adapter<EventsRecycl
     @NonNull
     @Override
     public EventViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new EventViewHolder(inflater.inflate(R.layout.card_event, parent, false));
+        return new EventViewHolder(inflater.inflate(R.layout.event_card, parent, false));
     }
 
     @Override
@@ -63,12 +64,31 @@ public class EventsRecyclerViewAdapter extends RecyclerView.Adapter<EventsRecycl
     class EventViewHolder extends RecyclerView.ViewHolder{
         CardView cardView;
         TextView eventNameTextView;
+        ImageView eventDate;
+        TextView eventDateText;
+        ImageView eventTime;
+        TextView eventTimeText;
+        ImageView eventImage;
+        TextView eventNameStyle;
+        TextView eventVenue;
+        TextView eventVenueMore;
+        TextView eventType;
 
         public EventViewHolder(View itemView) {
             super(itemView);
-            cardView = itemView.findViewById(R.id.cardView);
-            eventNameTextView = itemView.findViewById(R.id.eventName);
+            cardView = itemView.findViewById(R.id.cardview);
+            eventNameTextView = itemView.findViewById(R.id.event_name);
+            eventDate = itemView.findViewById(R.id.event_date);
+            eventDateText=itemView.findViewById(R.id.event_date_text);
+            eventTime=itemView.findViewById(R.id.event_time);
+            eventTimeText=itemView.findViewById(R.id.event_time_text);
+            eventImage=itemView.findViewById(R.id.eventImage);
+            eventNameStyle=itemView.findViewById(R.id.event_name_style);
+            eventVenue=itemView.findViewById(R.id.event_venue);
+            eventVenueMore=itemView.findViewById(R.id.event_venue_more);
+            eventType=itemView.findViewById(R.id.event_type);
         }
+
     }
 
     private void showEventLandingPage(int id){
